@@ -80,7 +80,7 @@ class PomodoroTimer {
 }
 
 // Solicitar permissão para notificações
-(Notification.permission !== "granted" && Notification.permission !== "denied") {
+if (Notification.permission !== "granted" && Notification.permission !== "denied") {
     Notification.requestPermission();
 }
 
