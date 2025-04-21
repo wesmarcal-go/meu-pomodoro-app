@@ -1,106 +1,39 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.gradient-background {
+    background: linear-gradient(98deg,#747efd,#fbd7f8,#f6ba76,#f1fec9);
+    background-size: 300% 300%;
+    animation: gradient-animation 10s ease infinite;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #000;
-    color: #FFD700;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    width: 100%;
-    max-width: 600px;
-    padding: 2rem;
-    text-align: center;
-}
-
-header {
-    margin-bottom: 3rem;
-}
-
-.avatar {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.site-info {
-    font-size: 1rem;
-    opacity: 0.8;
-    border: 1px solid #FFD700;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-}
-
-h1 {
-    font-family: "Merriweather", serif; /* Fonte adicionada */
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    font-weight: 700;
-}
-
-.timer {
-    font-family: 'Open Sans', sans-serif; /* Fonte adicionada */
-    font-weight: 300; /* Peso Light */
-    letter-spacing: -0.05em; /* Kerning reduzido */
-    font-size: 8rem;
-    margin-bottom: 2rem;
-    font-variant-numeric: tabular-nums;
-}
-
-.controls {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.btn {
-    background: transparent;
-    border: 2px solid #FFD700;
-    color: #FFD700;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #FFD700;
-    color: #000;
-}
-
-@media (max-width: 768px) {
-    .timer {
-        font-size: 6rem;
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
     }
-
-    h1 {
-        font-size: 2.5rem;
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
-@media (max-width: 480px) {
-    .timer {
-        font-size: 4rem;
-    }
+.title {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    text-align: right;
+    letter-spacing: -0.05em;
+}
 
-    h1 {
-        font-size: 2rem;
-    }
+.timer-text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    letter-spacing: -0.05em;
+}
 
-    .btn {
-        width: 50px;
-        height: 50px;
-    }
+.tomate-rotate {
+    transform: rotate(8.9deg);
+    transition: transform 0.3s ease;
+}
+
+.tomate-rotate:hover {
+    transform: rotate(0deg);
 }
