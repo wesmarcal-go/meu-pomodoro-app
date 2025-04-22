@@ -9,9 +9,11 @@ class PomodoroTimer {
         
         this.timerDisplay = document.getElementById('timer');
         this.playPauseBtn = document.getElementById('playPauseBtn');
+        this.resetBtn = document.getElementById('resetBtn');
         this.tomateImage = document.querySelector('.tomate-rotate');
         
         this.playPauseBtn.addEventListener('click', () => this.toggleTimer());
+        this.resetBtn.addEventListener('click', () => this.reset());
         this.updateDisplay();
         
         // Solicitar permissão para notificações
